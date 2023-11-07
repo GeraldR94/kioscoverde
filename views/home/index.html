@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
 <body>
-    <h1 class="bg-slate-700">HOME</h1>
+    <nav class="fixed top-0 right-0 left-0 bg-lime-700 h-16">
+        <div class="max-w-7xl bg-lime-800 h-16 mx-auto flex items-center justify-between px-4">
+            <p class="font-bold text-xl text-white">Kiosco Verde</p>
+                <!-- version movil -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+              
+                <!-- version escritorio -->
+              <div class="hidden md:flex flex-row gap-4">
+                <a href="/login/" class="transition ease-in-out text-white font-bold hover:bg-green-700 py-2 px-4 rounded-lg">Login</a>
+                <a href="/signup/" class="transition ease-in-out text-white font-bold bg-lime-500 hover:bg-green-700 py-2 px-4 rounded-lg">Signup</a>
+              </div>
+        </div>
+    </nav>
 </body>
 </html>
