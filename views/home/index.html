@@ -5,23 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>KV</title>
 </head>
 <body>
-    <nav class="fixed top-0 right-0 left-0 bg-lime-700 h-16">
-        <div class="max-w-7xl bg-lime-800 h-16 mx-auto flex items-center justify-between px-4">
-            <p class="font-bold text-xl text-white">Kiosco Verde</p>
-                <!-- version movil -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-              
-                <!-- version escritorio -->
-              <div class="hidden md:flex flex-row gap-4">
-                <a href="/login/" class="transition ease-in-out text-white font-bold hover:bg-green-700 py-2 px-4 rounded-lg">Login</a>
-                <a href="/signup/" class="transition ease-in-out text-white font-bold bg-lime-500 hover:bg-green-700 py-2 px-4 rounded-lg">Signup</a>
-              </div>
-        </div>
+    <nav id="navbar" class="fixed top-0 right-0 left-0 bg-lime-700 h-16">
     </nav>
+    <div class="pt-16 flex">
+        <h1 class="pt-16" >Casa de cambios KV, confiabilidad, rapidez y transparencia</h1>
+        <img src="/views/imas/principe perfil.jpg" alt="">
+    </div>
+    <main class="pt-16 h-screen flex flex-col justify-center items-center">
+        <div class="p-4 m-1 flex gap-16 text-xl font-bold">
+            <a class="text-black" href="#">Convert</a>
+            <a href="#">Exchange</a>
+            <a href="#">Comments</a>
+        </div>
+        <form id="form-container" class="form-container flex p-2 gap-4 bg-zinc-300 rounded-lg" action="">
+                    <div class="flex flex-col">
+                        <label class="font-semibold text-center" for="payment-method-from">Procesador</label>
+                            <select class="payment-method-from rounded-lg outline-teal-400" name="payment method" id="payment-method-from">
+                            <option value="USD">Paypal</option>
+                            <option value="USD">VES</option>
+                            <option value="USD">Zinli</option>
+                            <option value="USD">Usdt</option>
+                            <option value="USD">Pesos COP</option>
+                            <option value="USD">Airtm</option>
+                            <option value="USD">Wise</option>
+                            </select>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="font-semibold text-center" for="amount-to-change-from">Monto</label>
+                        <input id="amount-to-change-from" class="amount-to-change-from w-24 rounded-lg outline-teal-400 text-center" type="number" name="number" placeholder="monto">
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="font-semibold text-center" for="payment-method-to">Pago</label>
+                            <select class="payment-method-to rounded-lg outline-teal-400" name="payment method" id="payment-method-to"> 
+                            <option value="USD">VES</option>
+                            <option value="USD">Paypal</option>
+                            <option value="USD">Zinli</option>
+                            <option value="USD">Usdt</option>
+                            <option value="USD">Pesos COP</option>
+                            <option value="USD">Airtm</option>
+                            <option value="USD">Wise</option>
+                            </select>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="font-semibold text-center" for="amount-to-change-to">Monto</label>
+                        <input id="amount-to-change-to" class="amount-to-change-to w-24 rounded-lg outline-teal-400 text-center" type="number" name="number" placeholder="monto">
+                    </div>
+            </form>
+    </main>
+    <script src="/components/nav.js"></script>
 </body>
 </html>
