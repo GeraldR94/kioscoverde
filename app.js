@@ -16,8 +16,10 @@ require('dotenv').config();
 
 // Rutas fronted
 app.use('/', express.static(path.resolve(__dirname, 'views', 'home')));
+app.use('/components', express.static(path.resolve(__dirname, 'views', 'components')));
 app.use('/signup', express.static(path.resolve(__dirname, 'views', 'signup')));
 app.use('/styles', express.static(path.resolve(__dirname, 'views', 'styles')));
+app.use('/imas', express.static(path.resolve(__dirname, 'views', 'imas')));
 
 //Rutas Nackend
 
