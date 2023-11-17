@@ -7,54 +7,59 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>KV</title>
 </head>
-<body>
-    <nav id="navbar" class="fixed top-0 right-0 left-0 bg-lime-700 h-16">
+<body class="h-screen bg-green-50">
+    <nav id="navbar" class="fixed top-0 right-0 left-0 bg-neutral-700 h-16">
     </nav>
-    <div class="pt-16 flex">
-        <h1 class="pt-16" >Casa de cambios KV, confiabilidad, rapidez y transparencia</h1>
-        <img src="/views/imas/principe perfil.jpg" alt="">
+    <div class="h-80 pt-16 flex flex-col justify-center items-center">
+        <h1 class="pt-16 text-3xl" >Casa de cambios KV, confiabilidad, rapidez y transparencia</h1>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nihil excepturi eligendi fuga! <br> Sed accusamus distinctio eligendi, ipsa, possimus non fugiat dolores unde quaerat tempore rerum obcaecati sit odit harum.</p>
     </div>
-    <main class="pt-16 h-screen flex flex-col justify-center items-center">
+    <main class="h-80 flex flex-col justify-center items-center">
         <div class="p-4 m-1 flex gap-16 text-xl font-bold">
             <a class="text-black" href="#">Convert</a>
             <a href="#">Exchange</a>
             <a href="#">Comments</a>
         </div>
-        <form id="form-container" class="form-container flex p-2 gap-4 bg-zinc-300 rounded-lg" action="">
-                    <div class="flex flex-col">
-                        <label class="font-semibold text-center" for="payment-method-from">Procesador</label>
-                            <select class="payment-method-from rounded-lg outline-teal-400" name="payment method" id="payment-method-from">
-                            <option value="USD">Paypal</option>
-                            <option value="USD">VES</option>
-                            <option value="USD">Zinli</option>
-                            <option value="USD">Usdt</option>
-                            <option value="USD">Pesos COP</option>
-                            <option value="USD">Airtm</option>
-                            <option value="USD">Wise</option>
-                            </select>
-                    </div>
-                    <div class="flex flex-col">
-                        <label class="font-semibold text-center" for="amount-to-change-from">Monto</label>
-                        <input id="amount-to-change-from" class="amount-to-change-from w-24 rounded-lg outline-teal-400 text-center" type="number" name="number" placeholder="monto">
-                    </div>
-                    <div class="flex flex-col">
-                        <label class="font-semibold text-center" for="payment-method-to">Pago</label>
-                            <select class="payment-method-to rounded-lg outline-teal-400" name="payment method" id="payment-method-to"> 
-                            <option value="USD">VES</option>
-                            <option value="USD">Paypal</option>
-                            <option value="USD">Zinli</option>
-                            <option value="USD">Usdt</option>
-                            <option value="USD">Pesos COP</option>
-                            <option value="USD">Airtm</option>
-                            <option value="USD">Wise</option>
-                            </select>
-                    </div>
-                    <div class="flex flex-col">
-                        <label class="font-semibold text-center" for="amount-to-change-to">Monto</label>
-                        <input id="amount-to-change-to" class="amount-to-change-to w-24 rounded-lg outline-teal-400 text-center" type="number" name="number" placeholder="monto">
-                    </div>
-            </form>
+        <form id="form-container" class="form-container flex flex-col shadow-md p-4 gap-4 bg-neutral-600 rounded-lg" action="">
+        <div class="flex flex-row gap-4">
+            <div class="flex flex-col gap-1">
+              <label class="font-semibold text-lg text-center text-white" for="payment-method-from">Procesador</label>
+              <select class="payment-method-from rounded-lg outline-teal-400 py-1 px-2" name="payment method" id="payment-method-from">
+                <option value="PAYPAL">Paypal</option>
+                <option value="VES">VES</option>
+                <option value="ZINLI">Zinli</option>
+                <option value="USDT">Usdt</option>
+                <option value="COP">Pesos COP</option>
+                <option value="AIRTM">Airtm</option>
+                <option value="WISE">Wise</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-semibold text-center text-lg text-white" for="amount-to-change-from">Monto</label>
+              <input id="amount-to-change-from" class="amount-to-change-from py-1 px-2 w-24 rounded-lg outline-teal-400 text-center outline-4" type="number" name="number" min="0" placeholder="monto" oninput="convertCurrency('from')">
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-semibold text-center text-lg text-white" for="payment-method-to">Pago</label>
+              <select class="payment-method-to rounded-lg py-1 px-2 outline-teal-400" name="payment method" id="payment-method-to"> 
+                <option value="VES">VES</option>
+                <option value="PAYPAL">Paypal</option>
+                <option value="ZINLI">Zinli</option>
+                <option value="USDT">Usdt</option>
+                <option value="COP">Pesos COP</option>
+                <option value="AIRTM">Airtm</option>
+                <option value="WISE">Wise</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-semibold text-center text-lg text-white" for="amount-to-change-to">Monto</label>
+              <input id="amount-to-change-to" class="amount-to-change-to py-1 px-2 w-24 rounded-lg outline-teal-400 text-center" type="number" name="number" placeholder="monto" readonly>
+            </div>
+        </div>
+            <button class="w-auto bg-slate-100 rounded-md hover:bg-teal-400 shadow-md font-bold">Aceptar</button>
+        </form>
     </main>
+    <img class="flex items-center h-auto w-auto" src="/imas/portada.svg" alt="">
     <script src="/components/nav.js"></script>
+    <script src="/exchange.js"></script>
 </body>
 </html>
