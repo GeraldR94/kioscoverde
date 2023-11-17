@@ -3,7 +3,7 @@ const navbar = document.querySelector('#navbar');
 
 const createNavHome = () => {
   navbar.innerHTML = `
-    <div class="max-w-7xl bg-lime-800 h-16 mx-auto flex items-center justify-between px-4">
+    <div class="max-w-7xl bg-neutral-700 h-16 mx-auto flex items-center justify-between px-4">
             <p class="font-bold text-xl text-white">Kiosco Verde</p>
                 <!-- version movil -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 md:hidden text-white cursor-pointer p-2 hover:bg-lime-700 rounded-lg">
